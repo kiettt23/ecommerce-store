@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import Logo from "../components/Logo";
 import { Stack } from "@mui/material";
 
-const HeaderStyle = styled("header")(({ theme }) => ({
+const HeaderStyle = styled("header")(() => ({
   top: "10%",
   left: "50%",
   transform: "translateX(-50%)",

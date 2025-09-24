@@ -12,7 +12,7 @@ const LOGOUT = "LOGOUT";
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case INITIALIZE:
+    case INITIALIZE: {
       const { isAuthenticated, user } = action.payload;
       return {
         ...state,
@@ -20,6 +20,7 @@ const reducer = (state, action) => {
         isInitialized: true,
         user,
       };
+    }
     case LOGIN_SUCCESS:
       return {
         ...state,

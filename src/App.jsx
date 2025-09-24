@@ -7,11 +7,9 @@ import ThemeProvider from "./contexts/ThemeProvider";
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
-        <ThemeProvider>
-          <Router />
-        </ThemeProvider>
-      </BrowserRouter>
+      <ThemeProvider>
+        <Router />
+      </ThemeProvider>
     </AuthProvider>
   );
 }
