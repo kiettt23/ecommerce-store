@@ -46,7 +46,7 @@ function ProductFilter({ resetFilter }) {
       <Box>
         <Button
           size="large"
-          type="submit"
+          type="button"
           color="inherit"
           variant="outlined"
           onClick={resetFilter}

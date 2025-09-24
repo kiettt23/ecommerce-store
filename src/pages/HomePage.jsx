@@ -49,7 +49,7 @@ function HomePage() {
     <Container sx={{ display: "flex", minHeight: "100vh", mt: 3 }}>
       <Stack>
         <FormProvider methods={methods}>
-          <ProductFilter resetFilter={reset} />
+          <ProductFilter resetFilter={() => reset(defaultValues)} />
         </FormProvider>
       </Stack>
       <Stack sx={{ flexGrow: 1 }}>
@@ -102,13 +102,13 @@ function applyFilter(products, filters) {
   }
 
   // FILTER PRODUCTS
-  if (filters.gender.length > 0) {
-    filteredProducts = products.filter((product) =>
+  if (filters.gender?.length > 0) {
+    filteredProducts = filteredProducts.filter((product) =>
       filters.gender.includes(product.gender)
     );
   }
   if (filters.category !== "All") {
-    filteredProducts = products.filter(
+    filteredProducts = filteredProducts.filter(
       (product) => product.category === filters.category
     );
   }
